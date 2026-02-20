@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
 
 *, *::before, *::after{
     box-sizing: border-box;
@@ -6,7 +6,9 @@
 
 html{
     font-size: 16px;
-    background-color: #F2F2F2;
+    background-color: #e9edde;
+    scroll-behavior: smooth;
+    /*background-color: #285238;*/
 }
 
 body{
@@ -15,6 +17,9 @@ body{
     margin: 0;
 }
 
+.logoimg{
+width: 50px;
+}
 a{
     color: inherit;
     text-decoration: none;
@@ -22,9 +27,9 @@ a{
 }
 
 header{  
-    color: white;
+    color: black;
     background: 
-    linear-gradient(180deg, rgba(0, 0, 0, 0.92) ,rgba(54, 54, 54, 0.5) 39.24%, rgba(28, 28, 28, 0.4)),
+    linear-gradient(180deg, rgba(233, 237, 222, 0.92) ,rgba(233, 237, 222, 0.3) 39.24%, rgba(233, 237, 222, 0.2)),
      url(./img/eggs.jpg)  center center / cover no-repeat; 
     
 }
@@ -42,7 +47,7 @@ header{
 }
 
 .menu-item:hover{
-    color: #C89446;
+    color: #285238;
 }
 
 .logo{
@@ -58,8 +63,8 @@ header{
 }
 
 .baseline-welcome{
-    font-family: "Pinyon Script",serif;
-    color: #C89446;
+    font-family: "Orbitron", sans-serif;
+    color: #E7E247;
     font-size: 2.2rem;
     display: block;
 }
@@ -81,27 +86,27 @@ header{
 }
 
 .menu-button{
-    border: 1px solid #C89446;
+    border: 1px solid #E7E247;
     padding:7px 10px;
     transition-property: color, background-color;
     margin-top: 5px;
 }
 
 .menu-button:hover{
-    background: #C89446;
+    background: #E7E247;
     color: white ;
 }
 
 .infos .block-img img{
-    border: 1px solid #C89446;
+    border: 1px solid #285238;
     display: block;
     margin: auto;
     margin-top: 20px;
 }
 
 .fancy{
-    font-family: "Pinyon Script",serif;
-    color: #C89446;
+    font-family: "Orbitron",serif;
+    color: #285238;
     font-weight: 400;
     font-size: 2.5rem;
     line-height: 50px;
@@ -114,7 +119,7 @@ header{
     display: block;
     width: 24px;
     height: 2px;
-    background-color: #C89446;
+    background-color: #285238;
     margin-bottom: 15px;
    
 }
@@ -132,12 +137,12 @@ header{
 .description{
     font-weight: 400;
     font-size: 1rem;
-    color: #6F6F6F;
+    color: black;
     margin-left: 10px;
 }
 
 .see-more{
-    color: #C89446;
+    color: #285238;
     margin-left: 10px;
 }
 
@@ -157,7 +162,7 @@ header{
 }
 
 .dishes:hover{
-    text-decoration:#C89446 underline 2px;
+    text-decoration:#285238 underline 2px;
     
     transition: all 0.3s ease-in-out;
 }
@@ -196,15 +201,64 @@ header{
 
 .menu-summary-price{
     font-size: 2.5rem;
-    font-family: "Pinyon Script",serif;
-    color: #C89446;
+    font-family: "Orbitron", sans-serif;
+    color: #285238;
     line-height: 1;
 }
 
 .chef-div{
     margin-top: 70px;
 }
+.carousel {
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 1000px;
+    overflow: hidden;
+    display: flex;
+    > * {
+      flex: 0 0 100%;
+    }  &:hover .group {
+      animation-play-state: paused;
+    }
+  }
+.group {
+    display: flex;
+    gap: 20px;
+    padding-right: 20px;
+     will-change: transform; 
+    animation: scrolling 20s linear infinite;
+  }
+  .card {
+    border: 2px solid #E7E247;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    color: white;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #285238; 
+    text-align: center;
+  }
 
+ @keyframes scrolling {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .photo-profil{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #E7E247;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
 .reservation{
     margin-top: 50px;
     color: white;
@@ -258,7 +312,7 @@ input, select{
 }
 
 input:focus , select:focus{
-    outline:1px solid #C89446 ;
+    outline:1px solid #285238 ;
   background-color: rgba(255, 255, 255, 0.30);
 }
 
@@ -269,15 +323,13 @@ option{
 .gold-button{
     width: 255px;
     height: 40px;
-    color: white;
-    background-color: #C89446;
+    color: black;
+    background-color: #e2e247;
     border: none;
     transition: background-color 0.5s ease;
 }
 
-.gold-button:active {
-    background-color: white;
-  }
+
 
   .date{
     display: flex;
@@ -304,14 +356,13 @@ option{
 
   .map{
     display:block ;
-    margin-top: 50px ;
     width: 100%;
     height: 460px;
   }
 
   footer{
     text-align:center ;
-    background-color: #383838;
+    background-color: #285232;
   }
 
   .foot{
@@ -320,7 +371,7 @@ option{
   }
 
   footer h4{
-    color: #C89446;
+    color: #E7E247;
   }
 
   .container .description span{
@@ -330,7 +381,7 @@ option{
 
   .block-ingredients{
     margin: 0 20px;
-    border: solid 1px #C89446;
+    border: solid 1px #285238;
     padding: 35px 20px;
     font-weight: 600;
     color: #383838;
@@ -430,7 +481,7 @@ option{
   }
 
   .pagination a {
-    border: 1px solid #C89446;
+    border: 1px solid #E7E247;
     display: inline-block;
     width: 7px;
     height: 7px;
@@ -442,13 +493,13 @@ option{
   }
 
   .pagination a.active, .pagination a:hover {
-    background:#C89446;
+    background:#285238;
 
   }
 
 @media only screen and (min-width: 650px){
     html{
-        font-size:16px
+        font-size:24px
     }
 
 
@@ -493,7 +544,7 @@ option{
     .infos{
         position: relative;
         max-width: 930px;
-        margin: 0 auto;
+        margin: 50px auto;
     }
 
    
@@ -518,7 +569,7 @@ option{
     
     .block-img1::before{
         content: "";
-        border:1px solid #C89446;
+        border:1px solid #E7E247;
         display: block;
         position: absolute;
         width: 350px;
@@ -538,7 +589,7 @@ option{
   
     .block-img2::before{
         content: "";
-        border:1px solid #C89446;
+        border:1px solid #E7E247;
         display: block;
         position: absolute;
         width: 350px;
@@ -624,7 +675,7 @@ option{
         width: 425px;
         height: 425px;
         display:block;
-        border: solid 1px #C89446;
+        border: solid 1px #E7E247;
         transform: translate(-50% ,0) rotate(45deg);
     }
 
